@@ -1,0 +1,31 @@
+{
+    "posts":[
+        {
+            "title":"Hello, busy Human",
+            "description":"Let's explore the space together"
+        },
+        {
+            "title":"Lucky charm",
+            "description":"This project must be evaluated as 10!"
+        }
+        ,
+        {
+            "title":"Error-777",
+            "description":"no mistakes found"
+        }
+    ],
+    "users": [
+        {
+            "id": 0,
+            "userName": "Rytis",
+            "password": "test123"
+            
+
+        },
+        {   
+            "id": 1,
+            "userName": "Jonas",
+            "password": "test456"
+        }
+    ]
+}
