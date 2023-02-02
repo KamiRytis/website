@@ -7,7 +7,7 @@ const Post = ({data}) => {
     <>
         {
         data?
-         <div>
+         <div className="post">
             <h3>{data.title}</h3>
             <p>{data.description}</p>
         </div> :

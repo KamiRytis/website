@@ -29,8 +29,9 @@ const LogIn = () => {
     }
 
     return ( 
-    <>
-        <form onSubmit={handleSubmit}>
+    <>  
+        <form onSubmit={handleSubmit} className="form">
+        <h3>Log in</h3>
             <input 
                 type="email" 
                 name="email"
@@ -45,11 +46,11 @@ const LogIn = () => {
                 placeholder="password..."
                 onChange={(e)=>setInputs({...inputs, password:e.target.value})}
             />
+            {
+                wrongDetails && <span>Neteisingi prisijungimo duomenys</span>
+            }
             <button type="submit">Log in</button>
         </form>
-        {
-           wrongDetails && <span>Neteisingi prisijungimo duomenys</span>
-        }
     </> 
     );
 }

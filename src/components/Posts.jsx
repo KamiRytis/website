@@ -7,6 +7,7 @@ const Posts = () => {
 
     return ( 
     <>
+        <div className='posts'>
         {
             posts?
             posts.map(post=>
@@ -16,7 +17,8 @@ const Posts = () => {
                 />
             ):
             "Informacija kraunama"
-        }
+        } 
+        </div>
     </> 
     );
 }

@@ -25,7 +25,8 @@ const Add = () => {
 
     return ( 
     <>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
+        <h3>Add new Post !</h3>
         <label>
             Title:
             <input 
@@ -40,7 +41,7 @@ const Add = () => {
             <textarea 
                 name="description" 
                 value={formInputs.description} 
-                cols="auto" 
+                cols="15" 
                 rows="auto"
                 onChange={(e)=>setFormInputs({...formInputs,description:e.target.value})}
             >

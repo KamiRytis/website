@@ -33,7 +33,8 @@ const Register = () => {
 
     return ( 
     <>
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
+            <h3>Register</h3>
             <input 
                 type="email"
                 name="email"
@@ -55,11 +56,11 @@ const Register = () => {
                 onChange={(e)=>setFormInputs({...formInputs,confirmPassword:e.target.value})}
                 placeholder="confirmPassword..."
             />
+            {
+                invalidUsername && <span>User with this email already exists.</span>
+            }
             <button type="submit">Register</button>
         </form>
-        {
-            invalidUsername && <span>User with this email already exists.</span>
-        }
     </> 
     );
 }
