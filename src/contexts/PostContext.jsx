@@ -13,16 +13,27 @@ const PostProvider = ({children}) => {
         setPosts(fetchinamiPostai);
     }
     useEffect(()=>{
-        getPosts()
+        getPosts();
     },[])
 
+    const addNewPost =(newPost)=>{
+        fetch("http://localhost:3000/posts",{
+            method: "POST",
+            headers:{
+                'Content-type': 'application/json; charset =UTF-8'
+            },
+            body:JSON.stringify(newPost)
+        })
+        setPosts([...posts,newPost])
+    }
 
 
     return ( 
     <>
         <PostContext.Provider
             value={{
-                posts
+                posts,
+                addNewPost
             }}
         >
             {children}
