@@ -1,31 +1,41 @@
 {
-    "posts":[
-        {
-            "title":"Hello, busy Human",
-            "description":"Let's explore the space together"
-        },
-        {
-            "title":"Lucky charm",
-            "description":"This project must be evaluated as 10!"
-        }
-        ,
-        {
-            "title":"Error-777",
-            "description":"no mistakes found"
-        }
-    ],
-    "users": [
-        {
-            "id": 0,
-            "userName": "Rytis",
-            "password": "test123"
-            
-
-        },
-        {   
-            "id": 1,
-            "userName": "Jonas",
-            "password": "test456"
-        }
-    ]
+  "posts": [
+    {
+      "id": 0,
+      "title": "Hello, busy Human",
+      "description": "Let's explore the space together"
+    },
+    {
+      "id": 1,
+      "title": "Lucky charm",
+      "description": "This project must be evaluated as 10!"
+    },
+    {
+      "id": 2,
+      "title": "Error-777",
+      "description": "no mistakes found"
+    },
+    {
+      "title": "This is test post",
+      "description": "if the test works I have to get 10.",
+      "id": 1675340108953
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "email": "Rytis@gmail.com",
+      "password": "test123"
+    },
+    {
+      "id": 1,
+      "email": "Jonas@gmail.com",
+      "password": "test456"
+    },
+    {
+      "email": "Labas@gmail.com",
+      "password": "test123",
+      "id": 1675337827335
+    }
+  ]
 }

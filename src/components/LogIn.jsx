@@ -6,24 +6,25 @@ import { useState } from "react";
 
 const LogIn = () => {
     const [inputs, setInputs]=useState({
-        userName:'',
+        email:'',
         password:""
     })
 
     const {users, setLoggedInUser} = useContext(UserContext);
+    const [wrongDetails,setWrongDetails] =useState(false)
 
     const navigation = useNavigate();
 
     const handleSubmit = (e)=>{
         e.preventDefault();
         const loggedInUser = users.find(
-            user=>user.userName=== inputs.userName &&
+            user=>user.email=== inputs.email &&
             user.password===inputs.password);
         if(loggedInUser){
             setLoggedInUser(loggedInUser);
             navigation("/")
         } else {
-            return "Neteisingi prisijungimo duomenys"
+            return setWrongDetails(true)
         }
     }
 
@@ -31,11 +32,11 @@ const LogIn = () => {
     <>
         <form onSubmit={handleSubmit}>
             <input 
-                type="text" 
-                name="userName"
-                value={inputs.userName} 
-                placeholder="username..."
-                onChange={(e)=>setInputs({...inputs, userName:e.target.value})}
+                type="email" 
+                name="email"
+                value={inputs.email} 
+                placeholder="email..."
+                onChange={(e)=>setInputs({...inputs, email:e.target.value})}
             />
             <input 
                 type="password"
@@ -46,6 +47,9 @@ const LogIn = () => {
             />
             <button type="submit">Log in</button>
         </form>
+        {
+           wrongDetails && <span>Neteisingi prisijungimo duomenys</span>
+        }
     </> 
     );
 }
