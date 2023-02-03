@@ -2,7 +2,7 @@ const Footer = () => {
     return ( 
     <>
         <footer>
-            <span>&copy; CodeAcademy, Vilnius</span>
+            <span>All rights reserved<br />&copy; 2023 Rytis, CodeAcademy</span>
         </footer>
     </> 
     );

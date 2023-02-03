@@ -1,5 +1,21 @@
 body{
     margin: 0;
+    background-image: url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=998&q=80");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+}
+body a:hover{
+    color: blueviolet;
+}
+body button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+body button:hover{
+    color: blueviolet;
+    background-color: white;
 }
 .menu > img{
     width: 50px;
@@ -7,7 +23,7 @@ body{
 }
 .menu{
     height: 60px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
@@ -44,12 +60,18 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     margin: 50px 0;
+    gap: 20px;
 }
 .post{
     height: auto;
     width: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.post:hover{
+    overflow: visible;
 }
 .post > h3{
     text-align: center;
@@ -65,10 +87,22 @@ body{
 footer{
     height: 60px;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.6);
     position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+.title{
+    text-align: center;
+}
+.title1{
+    text-align: center;
+    margin-top: 50px;
+}
+.notFound{
+    grid-area: 2/2/3/3;
 }
