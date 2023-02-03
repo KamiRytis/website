@@ -11,7 +11,7 @@ const Home = () => {
         {
             loggedInUser?
             <Posts /> :
-            <h2 className='title1'>Hello, busy human!</h2>
+            <h2 className='title1'>Hello, busy human! <br /> Please Log in or Register</h2>
         }
     </> 
     );
